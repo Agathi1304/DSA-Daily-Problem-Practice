@@ -1,0 +1,26 @@
+name: Run Java Code
+
+on:
+  push:
+    branches:
+      - DSA
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v4
+
+    - name: Set up JDK 21
+      uses: actions/setup-java@v4
+      with:
+        distribution: 'temurin'
+        java-version: '21'
+
+    - name: Compile Java Files
+      run: javac DSA_Problems/Array_Problems/*.java
+
+    - name: Run Java Program
+      run: java -cp DSA_Problems Array_Problems.Contains_Duplicates_LC_217
