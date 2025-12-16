@@ -25,7 +25,7 @@ Constraints:
  */
 
 
-public class SubarraySumEqualsK {
+public class SubarraySumEqualsK_LC_560 {
 
 	public static void main(String[] args) {
 		
