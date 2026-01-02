@@ -41,11 +41,10 @@ public class BestTimetoBuyandSellStock_LC_121 {
 
 	private static int BuySellstocks(int[] prices) {
 		
-		int max=0;
+		int max=0,price=0;
 		for(int i=0;i<prices.length;i++) {
-			int price=0;
 			for(int j=i+1;j<prices.length;j++){
-					if(prices[i]<prices[j]) {
+					if(prices[j]>prices[i]) {
 						price=prices[j]-prices[i];
 						max=Math.max(price, max);
 					}

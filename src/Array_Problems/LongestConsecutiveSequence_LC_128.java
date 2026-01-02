@@ -40,26 +40,22 @@ public class LongestConsecutiveSequence_LC_128 {
 
 	private static int longconsecutiveCount(int[] nums) {
 	
-		if(nums.length==0) return 0;
-		
-		Arrays.sort(nums);
-		int count=1;
-		int max=1;
-		for(int i=1;i<nums.length;i++) {
-			
-			//left duplicatew
-			if(nums[i]==nums[i-1]) continue;
-			
-			if(nums[i]-nums[i-1]==1) {
-				count++;
-			}
-			else {
-				max=Math.max(max, count);
-				count=1;
-			}
-		}
-		max=Math.max(max, count);
-		return max;
+		 Arrays.sort(nums);
+	        int c=1,max=1;
+	        for(int i=1;i<nums.length;i++){
+
+	            if(nums[i]==nums[i-1]) continue;
+
+	            if(nums[i]-nums[i-1]==1){
+	                c++;
+	                max=Math.max(max,c);
+	            }
+	            else{
+	                c=1;
+	            }
+	        }
+
+	        return nums.length==0?0:max;
 		
 	}
 

@@ -40,22 +40,18 @@ public class ProductofArrayExceptSelf_LC_238 {
 
 	private static int[] productArrayexceptSelf(int[] nums) {
 		
-		int res[] = new int[nums.length];
-		int k=0;
-		
-		for(int i=0;i<nums.length;i++) {
-			int cp=1;
-			for(int j=0;j<nums.length;j++) {
-				
-				if(i==j) continue;
-				
-				cp*=nums[j];
-			}
-			res[k]=cp;
-			k++;
-		}
-		
-		return res;
+		 int res[] = new int[nums.length];
+
+	        for(int i=0;i<nums.length;i++){
+	          int  cp=1;
+	            for(int j=0;j<nums.length;j++){
+	                if(i==j) continue;
+	                cp*=nums[j];
+	            }
+	            res[i]=cp;
+	        }
+
+	        return res;
 	}
 
 }

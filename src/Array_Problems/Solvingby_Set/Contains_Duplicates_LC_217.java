@@ -1,4 +1,4 @@
-package Array_Problems;
+package Array_Problems.Solvingby_Set;
 
 import java.util.Arrays;
 import java.util.HashSet;

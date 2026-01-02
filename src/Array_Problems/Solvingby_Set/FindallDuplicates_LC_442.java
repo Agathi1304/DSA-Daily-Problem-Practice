@@ -1,9 +1,11 @@
-package Array_Problems;
+package Array_Problems.Solvingby_Set;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 /**
  * 
@@ -47,6 +49,22 @@ public class FindallDuplicates_LC_442 {
 		
 		int nums[]= {4,3,2,7,8,2,3,1};
 		System.out.print(alldupList(nums));
+		System.out.println();
+		System.out.print("Solving by set "+CollectionSet(nums));
+	}
+
+	private static List<Integer> CollectionSet(int[] nums) {
+		List<Integer> list = new ArrayList<>();
+		
+		Set<Integer> set= new HashSet<>();
+		
+		for(int k:nums) {
+			if(set.contains(k)) list.add(k);
+			
+			set.add(k);
+		}
+		
+		return list;
 	}
 
 	private static List<Integer> alldupList(int[] nums) {
