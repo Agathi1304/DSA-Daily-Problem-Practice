@@ -40,7 +40,29 @@ public class Move_Zeroes_LC_283 {
 		{
 			System.out.print(k+" ");
 		}
+	AnotherApproachMovingZero(nums);
 
+	}
+
+	private static void AnotherApproachMovingZero(int[] nums) {
+		
+		int j=0;
+		
+		for(int i=0;i<nums.length;i++) {
+			if(nums[i]!=0) {
+				int t=nums[i];
+				nums[i]=nums[j];
+				nums[j]=t;
+				j++;
+			}
+		}
+		System.out.println("Another approach ");
+		
+		for(int k:nums) {
+			System.out.print(k+" ");
+		}
+		
+		
 	}
 
 	private static int[] moveZeros(int[] nums) {
